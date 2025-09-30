@@ -28,21 +28,21 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.5rem;
   background: #fff5f1;
 }
 
 nav ul {
   list-style: none;
   text-align: center;
-  padding: 1rem;
+  padding: 0.5rem;
   background: #ebd0cf;
   font-weight: 600;
 }
 
 nav li {
   display: inline-block;
-  padding: 8px;
+  padding: 0.4rem;
   border-radius: 4px;
   border-color: #f3e3d3;
 }
@@ -52,11 +52,16 @@ li > a {
   color: #d4644c;
 }
 
+li > a:hover {
+  background-color: #e4b5b4;
+  color: #fcfcfc;
+}
+
 main section {
   display: grid;
   grid-template-columns: 1fr;
   height: 100%;
-  padding: 2rem;
+  padding: 24px;
   color: #3a001e;
   gap: 24px;
 }
@@ -76,10 +81,11 @@ main section .full-width {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 1rem;
+  padding: 16px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.219), rgba(0, 0, 0, 0.5)),
     url("beautysalon.webp");
   height: 100%;
+  min-height: 240px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -91,17 +97,13 @@ main section .full-width {
   max-width: 90%;
 }
 
-.hero-text h1 {
-  font-size: 36px;
-}
-
 .card {
   display: flex;
   flex-direction: column;
   background-color: #f7f1e9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 32px;
 }
 
 .card img {
@@ -128,18 +130,60 @@ main section .full-width {
   padding-right: 32px;
 }
 
-.card h3 {
-  margin-bottom: 8px;
+.card h2 {
   text-align: center;
 }
 
-.card p {
-  margin-bottom: 20px;
+@media (max-width: 768px) {
+  .card p {
+    margin-bottom: 16px;
+  }
 }
 
 .hours-list {
   list-style: none;
-  margin-top: 8px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-family: "Didot", serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #5a3e52;
+  background: #faf7f9;
+  border: 2px solid #e8dfe6;
+  border-radius: 12px;
+  text-align: center;
+  letter-spacing: 0.15em;
+  box-shadow: 0 2px 6px rgba(90, 62, 82, 0.1);
+}
+
+.hours-list li {
+  margin: 10px 0;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  color: #6b4861;
+  text-shadow: none;
+  animation: fadeIn 0.8s ease both;
+}
+
+.hours-list li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.hours-list li:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.hours-list li:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 footer {
